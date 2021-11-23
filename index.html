@@ -17,12 +17,11 @@
     function newNum() {
     var now = new Date().getTime();
 
-    var distance = countDownDate - now;
-    var seconds = Math.floor((distance % (1000 * 60000000000)) / 1000);
+    var seconds = Math.floor((countDownDate - now) / 1000);
     
-        document.getElementById(5).innerHTML = seconds;
+    document.getElementById(5).innerHTML = seconds;
 
-        setTimeout(() => { newNum() }, 1000);
+    setTimeout(() => { newNum() }, 1000);
     }
 </script>
 </body>
