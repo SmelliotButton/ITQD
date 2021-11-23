@@ -6,17 +6,19 @@
 <body>
 
 <h1>NO</h1>
-<h2>Countdown <span id="5"></span></h2>
+<h2>Ambigious Countdown <span id="5"></span></h2>
 <script>
-    let currentDate = new Date();
-    const year = currentDate.getFullYear()
-    let num = year * 50;
+    var countDownDate = new Date("May 12, 2022 15:37:25").getTime();
 
     newNum();
 
     function newNum() {
-        num = num - 1;
-        document.getElementById(5).innerHTML = num;
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+    var seconds = Math.floor((distance % (1000 * 60000000000)) / 1000);
+    
+        document.getElementById(5).innerHTML = seconds;
 
         setTimeout(() => { newNum() }, 1000);
     }
