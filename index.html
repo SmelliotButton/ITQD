@@ -6,6 +6,21 @@
 <body>
 
 <h1>NO</h1>
+<h2>Countdown <span id="5"></span></h2>
+<script>
+    let currentDate = new Date();
+    const year = currentDate.getFullYear()
+    let num = year * 50;
 
+    newNum();
+
+    function newNum() {
+        num = num - 1;
+        document.getElementById(5).innerHTML = num;
+
+        setTimeout(() => { newNum() }, 1000);
+    }
+</script>
 </body>
 </html>
+
