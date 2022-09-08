@@ -3,13 +3,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: gold;
+    background-color: green;
     height: 100vh;
   }
   
   h1 {
     font-size: 100px;
-    color: green;
+    color: black;
   }
 
   h1, h2 {
